@@ -18,6 +18,7 @@ HEADERS += \
     calculationstrategy.h \
     consoleoutput.h \
     customlib.h \
+    customlib.h \
     extensioncalculationstrategy.h \
     foldercalculationstrategy.h \
     percentcalculator.h
