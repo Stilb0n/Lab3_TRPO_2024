@@ -16,10 +16,13 @@ SOURCES += \
 
 HEADERS += \
     calculationstrategy.h \
+    calculationstrategy.h \
     consoleoutput.h \
     customlib.h \
     customlib.h \
     extensioncalculationstrategy.h \
+    extensioncalculationstrategy.h \
+    foldercalculationstrategy.h \
     foldercalculationstrategy.h \
     percentcalculator.h
  #    widget.h
