@@ -6,6 +6,20 @@
 #include "foldercalculationstrategy.h"
 int main(int argc, char *argv[])
 {
+
+    void execute(QString path, unsigned int flag) {
+        std::unique_ptr<CalculationStrategy> strat = nullptr;
+        if (flag == 0) {
+            strat = std::make_unique<FolderCalculationStrategy>();
+        }
+        else if (flag == 1) {
+            strat = std::make_unique<ExtensionCalculationStrategy>();
+        }
+        else {
+            throw std::runtime_error( "Not supported" );
+        }
+        strat->calculate(path);
+    }
     QApplication a(argc, argv);
 
     QDir myDir;
