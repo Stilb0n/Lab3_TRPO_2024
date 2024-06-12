@@ -3,6 +3,7 @@
 #include <iostream>
 #include<QFileInfo>
 #include<QDir>
+#include "foldercalculationstrategy.h"
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
@@ -48,7 +49,7 @@ entryInfoList,
             }
         }
 
-
+    }
         int main(int argc, char *argv[])
         {
             QApplication a(argc, argv);
@@ -108,3 +109,4 @@ entryInfoList,
 
             return a.exec();
         }
+    }
