@@ -21,7 +21,28 @@ foreach (QFileInfo folder, dir.entryInfoList(QDir::Dirs | QDir::NoDotAndDotDot, 
 return map;
 }
 
+std::sort(listOfFolders.begin(), listOfFolders.end());
 
+qDebug() << qPrintable(QString("%1 %2 %3")
+                           .arg("Bytes", 15)
+                           .arg("Extension", 30)
+                           .arg("Percent", 21));
+qDebug() << " ";
+
+// Calculating size of the whole folder
+quint64 dotFolderSize = 0;
+for (int i = 0; i < listOfFolders.size(); ++i) {
+dotFolderSize += listOfFolders[i].first;
+};
+
+/* в цикле выводим сведения о файлах */
+for (int i = 0; i < listOfFolders.size(); ++i) {
+qDebug() << qPrintable(QString("%1 %2 %3%")
+                           .arg(listOfFolders[i].first, 15)
+                           .arg(listOfFolders[i].second, 30)
+                           .arg(QString::number((static_cast<double>(listOfFolders[i].first) / static_cast<double>(dotFolderSize)), 'f', 2), 20));
+}
+};
 class ExtensionCalculationStrategy : public CalculationStrategy {
 public:
     void calculate(QString path) {
@@ -40,10 +61,6 @@ public:
             qDebug() << qPrintable(QString("%1 %2").arg(i.value(), 10).arg(i.key()));
         }
 
-        //        for (int i = 0; i < list.size(); ++i) {
-        //            QFileInfo fileInfo = list.at(i);
-        //            qDebug() << qPrintable(QString("%1 %2").arg(fileInfo.size(), 10).arg(fileInfo.fileName())); //выводим в формате "размер имя", переносим строку
-        //        }
     }
 };
 
