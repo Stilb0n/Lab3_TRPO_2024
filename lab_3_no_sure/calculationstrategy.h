@@ -6,6 +6,12 @@ class CalculationStrategy
 public:
     CalculationStrategy() {};
     virtual void calculate(QString path) = 0;
+
+    enum STRATEGY
+    {
+        FOLDER,
+        EXTENSION,
+    };
 };
 
 
