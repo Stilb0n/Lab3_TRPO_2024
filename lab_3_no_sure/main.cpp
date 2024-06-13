@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
 
     std::cout << "Test 0. General Usage" << std::endl;
 
-    QString path = "C:/Users/User/Desktop/keks/FileObserver/testFiles";
+    QString path = "C:/Users/User/Documents/Lab3_TRPO_2024/lab_3_no_sure/testFiles";
 
     std::shared_ptr<PercentCalculator> calculator = std::make_shared<PercentCalculator>();
     std::shared_ptr<CalculationStrategy> extStrat = std::make_shared<ExtensionCalculationStrategy>();
@@ -56,7 +56,7 @@ int main(int argc, char *argv[])
 
 
     std::cout << std::endl << "Test 1. Empty Folder" << std::endl;
-    path = "C:/Users/lekks/TSU/semester 6/TRPO/5-12/lab3/testFiles/empty folder/";
+    path = "C:/Users/User/Documents/Lab3_TRPO_2024/lab_3_no_sure/testFiles/emptyfolder/";
 
     calculator = std::make_shared<PercentCalculator>();
     extStrat = std::make_shared<ExtensionCalculationStrategy>();
@@ -67,7 +67,7 @@ int main(int argc, char *argv[])
 
 
     std::cout << std::endl << "Test 2. The Only One" << std::endl;
-    path = "C:/Users/lekks/TSU/semester 6/TRPO/5-12/lab3/testFiles/folder2/";
+    path = "C:/Users/User/Documents/Lab3_TRPO_2024/lab_3_no_sure/testFiles/folder2/";
 
     calculator = std::make_shared<PercentCalculator>();
     extStrat = std::make_shared<ExtensionCalculationStrategy>();
